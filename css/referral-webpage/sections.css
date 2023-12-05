@@ -1,7 +1,7 @@
 section {
     font-family: 'Montserrat', sans-serif, system-ui;
     padding-top: 0px;
-    max-height: 450px;
+    /* max-height: 450px; */
 }
 
 section > div {

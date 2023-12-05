@@ -29,7 +29,11 @@
     <link rel="stylesheet" href="css/responsive.css" type="text/css" />
     <link rel="stylesheet" href="css/banners.css" type="text/css" />
     <link rel="stylesheet" href="css/custom.css?v=0.04" type="text/css" />
-    <link rel="stylesheet" href="css/referral-webpage/sections.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="css/referral-webpage/sections.css"
+      type="text/css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       .scrollbar-near-moon::-webkit-scrollbar-track {
@@ -204,8 +208,15 @@
         <!-- Logo -->
       </div>
 
+      <!-- BANNER SECTION -->
       <section>
-        <div class="container clearfix banner banner-1" style="background-image: url('assets/banner-3.jpeg')">
+        <div
+          class="container clearfix banner banner-section"
+          style="
+            background-image: url('assets/banner-3.jpeg');
+            place-items: start;
+          "
+        >
           <img class="logo" src="assets/logo-sunpower2.png" />
 
           <h2 class="title">Earn $500 for each friend that goes solar</h2>
@@ -213,25 +224,109 @@
             Sign up for free today and start referring your friends and family.
           </p>
 
-          <button type="button"
-            class="button button-3d button-rounded">SIGN UP NOW</button>
+          <button
+            type="button"
+            class="button button-3d button-rounded button-rounded"
+            style="background-color: #f69b34"
+          >
+            SIGN UP NOW
+          </button>
         </div>
       </section>
 
-      <!-- REWARD SECTION -->
-      <section>
-        <div class="container clearfix reward-section" style="background-color: #3D3229F2;">
-
-          <h2 style="color: #fff;">How much can you earn?</h2>
+       <!-- REWARD SECTION -->
+       <section>
+        <div
+          class="container clearfix reward-section"
+          style="background-color: #3d3229f2"
+        >
+          <h2 style="color: #fff">How much can you earn?</h2>
 
           <div id="products-accordion"></div>
 
-          <button type="button"
-            class="button button-3d button-rounded">SIGN UP NOW</button>
+          <button
+            type="button"
+            class="button button-3d button-rounded button-rounded"
+            style="background-color: #f69b34"
+          >
+            SIGN UP NOW
+          </button>
         </div>
       </section>
       <!-- /REWARD SECTION -->
 
+      <!-- FORM SECTION -->
+      <section style="min-height: max-content">
+        <div
+          class="container clearfix form-section"
+          style="background-color: #f0eadc"
+        >
+          <article class="head">
+            <div class="head-text">
+              <div>
+                <h3 class="title" style="color: #000000">
+                  Submit your referral here:
+                </h3>
+                <p class="subtitle">
+                  Fill out the form below to send your referral
+                </p>
+              </div>
+              <i class="fa fa-arrow-down head-icon" aria-hidden="true"></i>
+            </div>
+            <button
+              type="button"
+              class="button button-3d button-rounded button-rounded text-capitalize"
+              style="background-color: #756b5d"
+            >
+              Login or Register as New Advocate
+            </button>
+          </article>
+
+          <div class="card">
+            <form class="card-form">
+              <h4>Referral Information:</h4>
+              <h4>Your Information:</h4>
+              <input
+                type="submit"
+                value="Submit"
+                class="button button-3d button-rounded button-rounded text-capitalize button-submit"
+                style="background-color: #f69b34"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER SECTION -->
+      <section>
+        <div
+          class="container clearfix footer-section"
+          style="background-color: #f0eadc"
+        >
+            <div class="content">
+              <p>Help friends go solar and reap the benefits together
+              </p>
+              <h2>Sign up today and start referring!</h2>
+            </div>
+            <button
+              type="button"
+              class="button button-3d button-rounded button-rounded"
+              style="background-color: #f69b34"
+            >
+              SIGN UP NOW
+            </button>
+        </div>
+      </section>
+
+      <!-- DISCLAIMER SECTION -->
+      <section>
+        <div
+          class="container clearfix disclaimer-section"
+          style="background-color: #282623"
+        >
+            <p class="disclaimer">Disclaimer: The information provided on this landing page is for general informational purposes only. While we strive to provide accurate and up-to-date information, we make no warranties of any kind regarding the accuracy, completeness, or suitability of the information contained herein. Any reliance you place on this information is strictly at your own risk. We are not liable for any losses or damages in connection with the use of this information. Please consult with a qualified professional or contact us directly for specific advice or information related to our products or services.</p>
+            <p class="copyright">Copyright SunPower  2023</p>
+      </div>
     </main>
     <!-- #wrapper end -->
 
@@ -245,205 +340,204 @@
     <script type="text/javascript" src="js/plugins.js"></script>
 
     <script>
-
       const products = [
         {
-            "product_id": "8292",
-            "product_name": "Solar Energy Installation",
-            "product_short_code": "",
-            "description": "",
-            "Image": "",
-            "order_no": "1",
-            "product_type": "1",
-            "show_product_on_app": "1",
-            "added_on": "2023-03-29 04:08:14",
-            "is_default": "0",
-            "is_active": "1",
-            "is_deleted": "0",
-            "is_hidden": "0",
-            "is_visible": "1",
-            "modified_on": "2023-03-29 04:08:14",
-            "parent_id": "8291",
-            "show_product": "1",
-            "show_rewards": "1",
-            "show_verified": "0",
-            "show_sold": "1",
-            "show_bonus": "1",
-            "converted_opportunity_amount": "0",
-            "converted_customer_amount": "0",
-            "bonus_amount": "0",
-            "is_bonus": "1",
-            "bonus_eligibility": "0",
-            "showrewards": "1",
-            "product_tiers": []
+          product_id: '8292',
+          product_name: 'Solar Energy Installation',
+          product_short_code: '',
+          description: '',
+          Image: '',
+          order_no: '1',
+          product_type: '1',
+          show_product_on_app: '1',
+          added_on: '2023-03-29 04:08:14',
+          is_default: '0',
+          is_active: '1',
+          is_deleted: '0',
+          is_hidden: '0',
+          is_visible: '1',
+          modified_on: '2023-03-29 04:08:14',
+          parent_id: '8291',
+          show_product: '1',
+          show_rewards: '1',
+          show_verified: '0',
+          show_sold: '1',
+          show_bonus: '1',
+          converted_opportunity_amount: '0',
+          converted_customer_amount: '0',
+          bonus_amount: '0',
+          is_bonus: '1',
+          bonus_eligibility: '0',
+          showrewards: '1',
+          product_tiers: []
         },
         {
-            "product_id": "8293",
-            "product_name": "Product For Testing",
-            "product_short_code": "undefined",
-            "description": "undefined",
-            "Image": "",
-            "order_no": "1",
-            "product_type": "0",
-            "show_product_on_app": "1",
-            "added_on": "2023-03-29 04:48:56",
-            "is_default": "0",
-            "is_active": "1",
-            "is_deleted": "0",
-            "is_hidden": "0",
-            "is_visible": "1",
-            "modified_on": "2023-03-29 04:48:56",
-            "parent_id": "0",
-            "show_product": "1",
-            "show_rewards": "1",
-            "show_verified": "1",
-            "show_sold": "1",
-            "show_bonus": "1",
-            "converted_opportunity_amount": "0",
-            "converted_customer_amount": "0",
-            "bonus_amount": "0",
-            "is_bonus": "1",
-            "bonus_eligibility": "0",
-            "showrewards": "1",
-            "product_tiers": []
+          product_id: '8293',
+          product_name: 'Product For Testing',
+          product_short_code: 'undefined',
+          description: 'undefined',
+          Image: '',
+          order_no: '1',
+          product_type: '0',
+          show_product_on_app: '1',
+          added_on: '2023-03-29 04:48:56',
+          is_default: '0',
+          is_active: '1',
+          is_deleted: '0',
+          is_hidden: '0',
+          is_visible: '1',
+          modified_on: '2023-03-29 04:48:56',
+          parent_id: '0',
+          show_product: '1',
+          show_rewards: '1',
+          show_verified: '1',
+          show_sold: '1',
+          show_bonus: '1',
+          converted_opportunity_amount: '0',
+          converted_customer_amount: '0',
+          bonus_amount: '0',
+          is_bonus: '1',
+          bonus_eligibility: '0',
+          showrewards: '1',
+          product_tiers: []
         },
         {
-            "product_id": "2369",
-            "product_name": "Gutters",
-            "product_short_code": "",
-            "description": "",
-            "Image": "",
-            "order_no": "5",
-            "product_type": "1",
-            "show_product_on_app": "1",
-            "added_on": "2019-07-22 17:11:20",
-            "is_default": "0",
-            "is_active": "1",
-            "is_deleted": "0",
-            "is_hidden": "0",
-            "is_visible": "1",
-            "modified_on": "2019-07-22 17:11:20",
-            "parent_id": "0",
-            "show_product": "1",
-            "show_rewards": "1",
-            "show_verified": "1",
-            "show_sold": "1",
-            "show_bonus": "1",
-            "converted_opportunity_amount": "10",
-            "converted_customer_amount": "100",
-            "bonus_amount": "200",
-            "is_bonus": "1",
-            "bonus_eligibility": "5",
-            "showrewards": "1",
-            "product_tiers": [
-                {
-                    "id": 144,
-                    "product_id": 2369,
-                    "company_id": 790,
-                    "level": 1,
-                    "converted_opportunity_amount": 0,
-                    "converted_customer_amount": 50,
-                    "is_active": 1,
-                    "added_by": 88293,
-                    "added_on": "2019-07-24 18:58:37"
-                },
-                {
-                    "id": 145,
-                    "product_id": 2369,
-                    "company_id": 790,
-                    "level": 2,
-                    "converted_opportunity_amount": 0,
-                    "converted_customer_amount": 25,
-                    "is_active": 1,
-                    "added_by": 88293,
-                    "added_on": "2019-07-24 18:58:37"
-                },
-                {
-                    "id": 146,
-                    "product_id": 2369,
-                    "company_id": 790,
-                    "level": 3,
-                    "converted_opportunity_amount": 0,
-                    "converted_customer_amount": 15,
-                    "is_active": 1,
-                    "added_by": 88293,
-                    "added_on": "2019-07-24 18:58:37"
-                }
-            ]
+          product_id: '2369',
+          product_name: 'Gutters',
+          product_short_code: '',
+          description: '',
+          Image: '',
+          order_no: '5',
+          product_type: '1',
+          show_product_on_app: '1',
+          added_on: '2019-07-22 17:11:20',
+          is_default: '0',
+          is_active: '1',
+          is_deleted: '0',
+          is_hidden: '0',
+          is_visible: '1',
+          modified_on: '2019-07-22 17:11:20',
+          parent_id: '0',
+          show_product: '1',
+          show_rewards: '1',
+          show_verified: '1',
+          show_sold: '1',
+          show_bonus: '1',
+          converted_opportunity_amount: '10',
+          converted_customer_amount: '100',
+          bonus_amount: '200',
+          is_bonus: '1',
+          bonus_eligibility: '5',
+          showrewards: '1',
+          product_tiers: [
+            {
+              id: 144,
+              product_id: 2369,
+              company_id: 790,
+              level: 1,
+              converted_opportunity_amount: 0,
+              converted_customer_amount: 50,
+              is_active: 1,
+              added_by: 88293,
+              added_on: '2019-07-24 18:58:37'
+            },
+            {
+              id: 145,
+              product_id: 2369,
+              company_id: 790,
+              level: 2,
+              converted_opportunity_amount: 0,
+              converted_customer_amount: 25,
+              is_active: 1,
+              added_by: 88293,
+              added_on: '2019-07-24 18:58:37'
+            },
+            {
+              id: 146,
+              product_id: 2369,
+              company_id: 790,
+              level: 3,
+              converted_opportunity_amount: 0,
+              converted_customer_amount: 15,
+              is_active: 1,
+              added_by: 88293,
+              added_on: '2019-07-24 18:58:37'
+            }
+          ]
         },
         {
-            "product_id": "1702",
-            "product_name": "Solar Pool Heating Installation",
-            "product_short_code": "",
-            "description": "",
-            "Image": "",
-            "order_no": "7",
-            "product_type": "1",
-            "show_product_on_app": "1",
-            "added_on": "2019-02-18 22:18:07",
-            "is_default": "0",
-            "is_active": "1",
-            "is_deleted": "0",
-            "is_hidden": "0",
-            "is_visible": "1",
-            "modified_on": "2019-02-18 22:18:07",
-            "parent_id": "0",
-            "show_product": "1",
-            "show_rewards": "1",
-            "show_verified": "1",
-            "show_sold": "1",
-            "show_bonus": "1",
-            "converted_opportunity_amount": "25",
-            "converted_customer_amount": "250",
-            "bonus_amount": "250",
-            "is_bonus": "1",
-            "bonus_eligibility": "5",
-            "showrewards": "1",
-            "product_tiers": []
+          product_id: '1702',
+          product_name: 'Solar Pool Heating Installation',
+          product_short_code: '',
+          description: '',
+          Image: '',
+          order_no: '7',
+          product_type: '1',
+          show_product_on_app: '1',
+          added_on: '2019-02-18 22:18:07',
+          is_default: '0',
+          is_active: '1',
+          is_deleted: '0',
+          is_hidden: '0',
+          is_visible: '1',
+          modified_on: '2019-02-18 22:18:07',
+          parent_id: '0',
+          show_product: '1',
+          show_rewards: '1',
+          show_verified: '1',
+          show_sold: '1',
+          show_bonus: '1',
+          converted_opportunity_amount: '25',
+          converted_customer_amount: '250',
+          bonus_amount: '250',
+          is_bonus: '1',
+          bonus_eligibility: '5',
+          showrewards: '1',
+          product_tiers: []
         },
         {
-            "product_id": "1288",
-            "product_name": "Roof Repair",
-            "product_short_code": "",
-            "description": "",
-            "Image": "",
-            "order_no": "9",
-            "product_type": "1",
-            "show_product_on_app": "1",
-            "added_on": "2018-12-03 23:58:28",
-            "is_default": "0",
-            "is_active": "1",
-            "is_deleted": "0",
-            "is_hidden": "0",
-            "is_visible": "1",
-            "modified_on": "2018-12-03 23:58:28",
-            "parent_id": "936",
-            "show_product": "1",
-            "show_rewards": "1",
-            "show_verified": "1",
-            "show_sold": "1",
-            "show_bonus": "1",
-            "converted_opportunity_amount": "15",
-            "converted_customer_amount": "150",
-            "bonus_amount": "250",
-            "is_bonus": "1",
-            "bonus_eligibility": "5",
-            "showrewards": "1",
-            "product_tiers": [
-                {
-                    "id": 97,
-                    "product_id": 1288,
-                    "company_id": 790,
-                    "level": 1,
-                    "converted_opportunity_amount": 0,
-                    "converted_customer_amount": 50,
-                    "is_active": 1,
-                    "added_by": 52497,
-                    "added_on": "2019-05-15 18:48:26"
-                }
-            ]
+          product_id: '1288',
+          product_name: 'Roof Repair',
+          product_short_code: '',
+          description: '',
+          Image: '',
+          order_no: '9',
+          product_type: '1',
+          show_product_on_app: '1',
+          added_on: '2018-12-03 23:58:28',
+          is_default: '0',
+          is_active: '1',
+          is_deleted: '0',
+          is_hidden: '0',
+          is_visible: '1',
+          modified_on: '2018-12-03 23:58:28',
+          parent_id: '936',
+          show_product: '1',
+          show_rewards: '1',
+          show_verified: '1',
+          show_sold: '1',
+          show_bonus: '1',
+          converted_opportunity_amount: '15',
+          converted_customer_amount: '150',
+          bonus_amount: '250',
+          is_bonus: '1',
+          bonus_eligibility: '5',
+          showrewards: '1',
+          product_tiers: [
+            {
+              id: 97,
+              product_id: 1288,
+              company_id: 790,
+              level: 1,
+              converted_opportunity_amount: 0,
+              converted_customer_amount: 50,
+              is_active: 1,
+              added_by: 52497,
+              added_on: '2019-05-15 18:48:26'
+            }
+          ]
         }
-    ];
+      ]
 
     var verifiedText = 'Verified Referrals';
     var soldText = 'Sold Referrals';
