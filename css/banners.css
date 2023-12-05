@@ -18,20 +18,26 @@ h6 {
   padding: 60px;
 
   .logo {
-    width: 120px;
+    width: 220px;
   }
 
   .title {
     color: #000000;
     font-weight: 700;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    /* max-width: 350px; */
+    line-height: 1;
+    margin: 40px 0 15px 0;
+    max-width: 40%;
   }
 
   .subtitle {
     color: #000000;
     font-weight: 300;
-    /* max-width: 350px; */
+    margin: 0 0 15px 0;
+    max-width: 40%;
+  }
+
+  .button-login {
+    border-radius: 100px;
+    border: none;
   }
 }
