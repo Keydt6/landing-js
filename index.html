@@ -46,19 +46,20 @@
       .scrollbar-near-moon::-webkit-scrollbar-thumb {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-        background-image: -webkit-gradient(
+        /* background-image: -webkit-gradient(
           linear,
           left bottom,
           left top,
-          from(#5ee7df),
-          to(#b490ca)
+          from(#fff),
+          to(#F69B34)
         );
         background-image: -webkit-linear-gradient(
           bottom,
-          #5ee7df 0%,
-          #b490ca 100%
-        );
-        background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+          #fff 0%,
+          #F69B34 100%
+        ); */
+        /* background-image: linear-gradient(to top, #fff 0%, #F69B34 100%); */
+        background-color:  #F69B34;
       }
 
       .thin::-webkit-scrollbar {
@@ -77,31 +78,16 @@
         #footerVideo iframe {
           width: 100%;
         }
-
-        .boxed-slider img {
-          min-height: 170px;
-        }
       }
 
-      .panel-heading .accordion-toggle:after {
+      .accordion-toggle:after {
         font-family: 'font-icons';
-        content: '\e713';
-        float: right;
+        content: '\e72c';
+        margin: 12px;
       }
 
-      .panel-heading .accordion-toggle.collapsed:after {
-        content: '\e714';
-      }
-
-      .panel.panel-default {
-        background: transparent;
-        border: none;
-        margin: 0 25px 0 0;
-      }
-
-      .panel-default > .panel-heading {
-        background-color: rgba(238, 238, 238, 0.5);
-        border-radius: 0px;
+      .accordion-toggle.collapsed:after {
+        content: '\e72d';
       }
 
       .button.button-large {
@@ -238,7 +224,10 @@
 
           <h2 style="color: #fff;">How much can you earn?</h2>
 
-          <button>SIGN UP NOW</button>
+          <div id="products-accordion"></div>
+
+          <button type="button"
+            class="button button-3d button-rounded">SIGN UP NOW</button>
         </div>
       </section>
       <!-- /REWARD SECTION -->
@@ -456,308 +445,145 @@
         }
     ];
 
-    products.filter((product) => product.show_product).forEach((idx, product) => {
-      let content = '';
-      content +=
-          '<div class="panel panel-default">' +
-          '<div class="panel-heading">' +
-          '<h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '">' + product.product_name + '</a></h4></div>'
-        if (i == 0) {
-          content += '<div id="collapse' + i + '" class="panel-collapse collapse in"><div class="panel-body">'
+    var verifiedText = 'Verified Referrals';
+    var soldText = 'Sold Referrals';
+
+    var verified_quote = 'Once we have qualified your referral';
+    var sold_quote = 'Once your referral makes a purchase';
+
+    var product_percent_sale = '0'; 
+
+    let content = '';
+    products.filter((product) => product.show_product).forEach((product, idx) => {
+      content += '<div class="">' +
+          '<div style="color: #fff">' +
+          '<p><a class="accordion-toggle" style="color: #fff;" data-toggle="collapse" data-parent="#products-accordion" href="#collapse-product-' + idx + '">' + product.product_name + '</a></p></div>';
+        if (idx == 0) {
+          content += '<div id="collapse-product-' + idx + '" class="collapse in"><div style="display: flex; justify-content: space-evenly; padding: 20px;">';
         } else {
-          content += '<div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body">'
+          content += '<div id="collapse-product-' + idx + '" class="collapse"><div style="display: flex; justify-content: space-evenly; padding: 20px;">';
         }
 
         if (product.product_type == 2) {
-          content += '<div class="col-sm-2">&nbsp;</div>'
+            content += '<div class="col-sm-2">&nbsp;</div>';
         }
-
         if (product.show_verified == 1) {
-                    content +=
-                      '<div class="col-sm-4 text-center">' +
-                      '<div class="boxes">'
-                    if (
-                      product.product_type == 1 &&
-                      product.product_tiers.length > 0
-                    ) {
-                      content +=
-                        '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' +
-                        verifiedText +
-                        '<br><small>' +
-                        verified_quote +
-                        '</small></h3>'
-                      if (product.product_tiers.length < 3)
-                        content +=
-                          '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">'
-                      else
-                        content +=
-                          '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">'
+            content += '<div class="col-sm-4 text-center">' +
+                '<div class="">';
+            if (product.product_type == 1 && product.product_tiers.length > 0) {
+                content += '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' + verifiedText + '<br><small>' + verified_quote + '</small></h3>';
+                if (product.product_tiers.length < 3)
+                    content += '<div class="pricing-text text-left" style="padding: 5px;height: 138px;">';
+                else
+                    content += '<div class="pricing-text text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">';
 
-                      content +=
-                        '<p style="font-size:16px;margin: 10px;color:#000;"> Verified Amount <span class="pull-right" style="margin: 0;font-size: large;">$' +
-                        product.converted_opportunity_amount +
-                        '</span></p>'
-                      $.each(product.product_tiers, function (i, tier) {
-                        content +=
-                          '<p style="font-size:16px;margin: 10px;color:#000;">' +
-                          ordinal_suffix_of(tier.level) +
-                          ' Tier '
-                        content +=
-                          '<span class="pull-right" style="margin: 0;font-size: large;">$' +
-                          tier.converted_opportunity_amount +
-                          '</span></p>'
-                      })
-                    } else {
-                      content +=
-                        '<h3 class="verified" style="font-size:22px;">' +
-                        verifiedText +
-                        '</h3>' +
-                        '<div class="pricing-price">'
-                      if (product.show_rewards == 1) {
-                        content +=
-                          '<span class="price-unit">$</span>' +
-                          product.converted_opportunity_amount +
-                          ' '
-                      }
-                      content +=
-                        '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' +
-                        verified_quote +
-                        '</p>'
-                    }
-                    content += '</div>' + '</div>' + '</div>'
-                  }
-    });
-      // Para el accordion
-      function productsList(company_id) {
-        $.ajax({
-          type: 'GET',
-          url: API_URL + 'refPageProducts/' + company_id,
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            Authorization: TOKEN
-          },
-          success: function (res) {
-            if (res.success == '1') {
-              content = ''
-              $.each(res.result, function (i, product) {
-                if (product.show_product == 1) {
-                  content +=
-                    '<div class="panel panel-default">' +
-                    '<div class="panel-heading">' +
-                    '<h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse' +
-                    i +
-                    '">' +
-                    product.product_name +
-                    '</a></h4></div>'
-                  if (i == 0) {
-                    content +=
-                      '<div id="collapse' +
-                      i +
-                      '" class="panel-collapse collapse in"><div class="panel-body">'
-                  } else {
-                    content +=
-                      '<div id="collapse' +
-                      i +
-                      '" class="panel-collapse collapse"><div class="panel-body">'
-                  }
-                  if (product.product_type == 2) {
-                    content += '<div class="col-sm-2">&nbsp;</div>'
-                  }
-                  if (product.show_verified == 1) {
-                    content +=
-                      '<div class="col-sm-4 text-center">' +
-                      '<div class="boxes">'
-                    if (
-                      product.product_type == 1 &&
-                      product.product_tiers.length > 0
-                    ) {
-                      content +=
-                        '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' +
-                        verifiedText +
-                        '<br><small>' +
-                        verified_quote +
-                        '</small></h3>'
-                      if (product.product_tiers.length < 3)
-                        content +=
-                          '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">'
-                      else
-                        content +=
-                          '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">'
-
-                      content +=
-                        '<p style="font-size:16px;margin: 10px;color:#000;"> Verified Amount <span class="pull-right" style="margin: 0;font-size: large;">$' +
-                        product.converted_opportunity_amount +
-                        '</span></p>'
-                      $.each(product.product_tiers, function (i, tier) {
-                        content +=
-                          '<p style="font-size:16px;margin: 10px;color:#000;">' +
-                          ordinal_suffix_of(tier.level) +
-                          ' Tier '
-                        content +=
-                          '<span class="pull-right" style="margin: 0;font-size: large;">$' +
-                          tier.converted_opportunity_amount +
-                          '</span></p>'
-                      })
-                    } else {
-                      content +=
-                        '<h3 class="verified" style="font-size:22px;">' +
-                        verifiedText +
-                        '</h3>' +
-                        '<div class="pricing-price">'
-                      if (product.show_rewards == 1) {
-                        content +=
-                          '<span class="price-unit">$</span>' +
-                          product.converted_opportunity_amount +
-                          ' '
-                      }
-                      content +=
-                        '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' +
-                        verified_quote +
-                        '</p>'
-                    }
-                    content += '</div>' + '</div>' + '</div>'
-                  }
-                  if (product.show_sold == 1) {
-                    content +=
-                      '<div class="col-sm-4">' +
-                      '<div class="boxes text-center">'
-
-                    if (product.product_type == 2) {
-                      content +=
-                        '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' +
-                        soldText +
-                        '<br><small>' +
-                        sold_quote +
-                        '</small></h3>'
-                      if (product.product_referral_tiers.length <= 3)
-                        content +=
-                          '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">'
-                      else
-                        content +=
-                          '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">'
-                      $.each(
-                        product.product_referral_tiers,
-                        function (i, tier) {
-                          if (i == product.product_referral_tiers.length - 1)
-                            content +=
-                              '<p style="font-size:16px;margin: 10px;color:#000;">' +
-                              ordinal_suffix_of(tier.referral_tier) +
-                              ' and Onwards '
-                          else
-                            content +=
-                              '<p style="font-size:16px;margin: 10px;color:#000;">' +
-                              ordinal_suffix_of(tier.referral_tier) +
-                              ' Sold '
-
-                          content +=
-                            '<span class="pull-right" style="margin: 0;font-size: large;">$' +
-                            tier.converted_customer_amount +
-                            '</span></p>'
-                        }
-                      )
-                    } else if (
-                      product.product_type == 1 &&
-                      product.product_tiers.length > 0
-                    ) {
-                      content +=
-                        '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' +
-                        soldText +
-                        '<br><small>' +
-                        sold_quote +
-                        '</small></h3>'
-                      if (product.product_tiers.length < 3)
-                        content +=
-                          '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">'
-                      else
-                        content +=
-                          '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">'
-
-                      content +=
-                        '<p style="font-size:16px;margin: 10px;color:#000;"> Sold Amount <span class="pull-right" style="margin: 0;font-size: large;">$' +
-                        product.converted_customer_amount +
-                        '</span></p>'
-                      $.each(product.product_tiers, function (i, tier) {
-                        content +=
-                          '<p style="font-size:16px;margin: 10px;color:#000;">' +
-                          ordinal_suffix_of(tier.level) +
-                          ' Tier '
-                        content +=
-                          '<span class="pull-right" style="margin: 0;font-size: large;">$' +
-                          tier.converted_customer_amount +
-                          '</span></p>'
-                      })
-                    } else {
-                      if (product_percent_sale == 1)
-                        content +=
-                          '<h3 class="sold" style="font-size:22px;">% Of Sale</h3>'
-                      else
-                        content +=
-                          '<h3 class="sold" style="font-size:22px;">' +
-                          soldText +
-                          '</h3>'
-
-                      content += '<div class="pricing-price">'
-                      if (product.show_rewards == 1) {
-                        if (product_percent_sale == 1)
-                          content +=
-                            '<span class="price-unit"></span>' +
-                            product.converted_customer_amount +
-                            '%'
-                        else
-                          content +=
-                            '<span class="price-unit">$</span>' +
-                            product.converted_customer_amount +
-                            ''
-
-                        content +=
-                          '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' +
-                          sold_quote +
-                          '</p>'
-                      }
-                    }
-                    content += '</div>' + '</div>' + '</div>'
-                  }
-                  if (
-                    product.is_bonus == 1 &&
-                    product.show_bonus == 1 &&
-                    product.product_type != 2
-                  ) {
-                    content +=
-                      '<div class="col-sm-4">' +
-                      '<div class="boxes text-center">' +
-                      '<h3 style="font-size:22px;">Bonus Rewards</h3>' +
-                      '<div class="pricing-price">'
-                    if (product.show_rewards == 1) {
-                      content +=
-                        '<span class="price-unit">$</span>' +
-                        product.bonus_amount +
-                        ' '
-                    }
-                    content +=
-                      '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">Receive a bonus for every (' +
-                      product.bonus_eligibility +
-                      ') sold</p>' +
-                      '</div>' +
-                      '</div>' +
-                      '</div>'
-                  }
-                  content +=
-                    '<div class="clearfix"></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>'
-                }
-              })
-              $('#accordion').html(content)
+                content += '<p style="font-size:16px;margin: 10px;color:#000;"> Verified Amount <span class="pull-right" style="margin: 0;font-size: large;">$' + product.converted_opportunity_amount + '</span></p>';
+                $.each(product.product_tiers, function (i, tier) {
+                    content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.level) + ' Tier ';
+                    content += '<span class="pull-right" style="margin: 0;font-size: large;">$' + tier.converted_opportunity_amount + '</span></p>';
+                });
             } else {
-              $('#accordion').html(res.message)
+                // content += '<h3 class="verified" style="font-size:22px;">' + verifiedText + '</h3>';
+                content += '<div class="pricing-text">';
+                if (product.show_rewards == 1) {
+                    content += '<div class="pricing-icon"><i class="icon-dollar"></i></div>';
+                    content += '<h3>Earn $' + product.converted_opportunity_amount + '</h3> ';
+                }
+                content += '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' + verified_quote + '</p>';
             }
-          },
-          error: function (e) {
-            $('#accordion').html('Something went wrong!')
-          }
-        })
-      }
+            content += '</div>' +
+                '</div>' +
+                '</div>';
+        }
+        if (product.show_sold == 1) {
+            content += '<div class="col-sm-4">' +
+                '<div class="text-center">';
+
+            if (product.product_type == 2) {
+                content += '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' + soldText + '<br><small>' + sold_quote + '</small></h3>';
+                if (product.product_referral_tiers.length <= 3)
+                    content += '<div class="pricing-text text-left" style="padding: 5px;height: 138px;">';
+                else
+                    content += '<div class="pricing-text text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">';
+                $.each(product.product_referral_tiers, function (i, tier) {
+                    if (i == (product.product_referral_tiers.length - 1))
+                        content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.referral_tier) + ' and Onwards ';
+                    else
+                        content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.referral_tier) + ' Sold ';
+
+                    content += '<span class="pull-right" style="margin: 0;font-size: large;">$' + tier.converted_customer_amount + '</span></p>';
+                });
+            } else if (product.product_type == 1 && product.product_tiers.length > 0) {
+                content += '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' + soldText + '<br><small>' + sold_quote + '</small></h3>';
+                if (product.product_tiers.length < 3)
+                    content += '<div class="pricing-text text-left" style="padding: 5px;height: 138px;">';
+                else
+                    content += '<div class="pricing-text text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">';
+
+                content += '<p style="font-size:16px;margin: 10px;color:#000;"> Sold Amount <span class="pull-right" style="margin: 0;font-size: large;">$' + product.converted_customer_amount + '</span></p>';
+                $.each(product.product_tiers, function (i, tier) {
+                    content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.level) + ' Tier ';
+                    content += '<span class="pull-right" style="margin: 0;font-size: large;">$' + tier.converted_customer_amount + '</span></p>';
+                });
+            } else {
+                if (product_percent_sale == 1) {
+                    content += '<h3 class="sold" style="font-size:22px;">% Of Sale</h3>';
+                }
+                // else
+                //     content += '<h3 class="sold" style="font-size:22px;">' + soldText + '</h3>';
+
+                content += '<div class="pricing-text">';
+                if (product.show_rewards == 1) {
+                    if (product_percent_sale == 1)
+                        content += '' + product.converted_customer_amount + '%';
+                    else {
+                        content += '<div class="pricing-icon"><i class="icon-dollar"></i></div>';
+                        content += '<h3>Earn $' + product.converted_customer_amount + '</h3>'
+                    };
+
+                    content += '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' + sold_quote + '</p>';
+                }
+            }
+            content += '</div>' +
+                '</div>' +
+                '</div>';
+        }
+        if (product.is_bonus == 1 && product.show_bonus == 1 && product.product_type != 2) {
+            content += '<div class="col-sm-4">' +
+                '<div class="text-center">' +
+                // '<h3 style="font-size:22px;">Bonus Rewards</h3>' +
+                '<div class="pricing-text">';
+            if (product.show_rewards == 1) {
+                content += '<div class="pricing-icon"><i class="icon-dollar"></i></div>';
+                content += '<h3>Earn $' + product.bonus_amount + '</h3> ';
+            }
+            content += '<p style="font-size:16px; margin-top:0px; margin-bottom:20px; color:#000;">Receive a bonus for every (' + product.bonus_eligibility + ') sold</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        }
+        content += '' +
+            '</div>' +
+            '</div>' +
+            '</div>';
+        $('#products-accordion').html(content);
+    });
+
+    function ordinal_suffix_of(i) {
+        var j = i % 10,
+            k = i % 100;
+        if (j == 1 && k != 11) {
+            return i + "st";
+        }
+        if (j == 2 && k != 12) {
+            return i + "nd";
+        }
+        if (j == 3 && k != 13) {
+            return i + "rd";
+        }
+        return i + "th";
+    }
+
     </script>
 
     <script type="text/javascript" src="js/functions.js"></script>

@@ -10,4 +10,22 @@ section > div {
 
 .reward-section {
     text-align: center;
+
+    #accordion > h1, h2, h3, h4, h5, p {
+        color: #fff !important;
+    }
+
+    .pricing-text {
+        color: #fff !important;
+        p {
+            color: #fff !important;
+        }
+        
+    }
+
+    .pricing-icon {
+        color: #FBB15D;
+        font-weight: 600;
+        font-size: 2.5em;
+    }
 }
