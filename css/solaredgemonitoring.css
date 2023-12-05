@@ -1,0 +1,123 @@
+    .curpower {
+        color: #9c9a9a;
+        font-size: 18px;
+        margin: 12px 0;
+    }
+    .curpowerdesc {
+        color: #69B424;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 12px 0;
+    }
+    .powtitle {
+        color: #9c9a9a;
+        font-size: 16px;
+        margin: 0;
+    }
+    .powdesc {
+        font-size: 16px;
+        margin: 0 0 4px;
+        font-weight: 700;
+        color:#737373;
+    }
+    .bothbord {
+        border-left: 1px solid #E5E5E5;
+        border-right: 1px solid #E5E5E5;
+    }
+    .nav-tabs-custom>.nav-tabs>li.active>a, .nav-tabs-custom>.nav-tabs>li.active:hover>a, .nav-tabs-custom>.nav-tabs>li>a {
+        color: #9c9a9a;
+    }
+    @media (max-width:767px){
+        .nav-tabs-custom>.nav-tabs>li.active>a, .nav-tabs-custom>.nav-tabs>li.active:hover>a, .nav-tabs-custom>.nav-tabs>li>a {
+            font-size: 12px;
+            padding: 10px;
+        }
+        .location {
+            margin-left: 20px;
+            text-indent: -30px;
+        }
+    }
+    .nav-tabs-custom>.nav-tabs>li {border:none;}
+    .backgrounds {
+        background-image:url(../images/solaredge/solar.jpg);
+        background-size: cover;
+        margin-bottom: 20px;
+        min-height: 250px;
+        background-position: center center;
+    }
+    .updates {
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        background: rgba(0,0,0,0.5);
+        padding: 5px;
+        margin-top:27px;
+    }
+    .location {
+        min-height: 150px;
+        padding-top:15px;
+    }
+    .location, .volts, .temp {
+        color: #fff;
+        font-size: 18px;
+    }
+    .location span, .volts span, .temp span {
+        font-size: 28px;
+    }
+    .location span {vertical-align:middle;}
+    .content-wrapper, .main-footer {margin-left:0px;}
+    .nav-tabs-custom>.nav-tabs>li.active {
+        border-top-color: #3c8dbc!important;
+    }
+	.carousel-control {color:#000;}
+
+	.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+    margin-left: 100px;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.amcharts-chart-div > a {
+    display: none !important;
+    content: "Solar Edge Charts";
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+	
+	@media screen and (min-width: 768px) {
+		.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+			margin-left: -150px;
+		}
+		.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+			margin-right: -150px;
+		}
+		.carousel-inner .powtitle {
+			margin-top: 50px;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+			margin-left: -40px;
+		}
+		.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+			margin-right: -40px;
+		}
+		.carousel-inner .powtitle {
+			margin-top: 5px;
+		}
+	}

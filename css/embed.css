@@ -1,0 +1,36 @@
+html,
+body {
+	overflow: hidden;
+}
+.gtr-embed-iframe {
+	position: fixed; 
+	right: 0; 
+	bottom: 0; 
+	left: 0;
+	top: 0;
+	-webkit-overflow-scrolling: touch !important;
+	overflow-y: scroll !important;
+	background: #fff;
+        z-index:11111 !important;
+
+}
+.gtr-embed-iframe_scripts {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 130px;
+	-webkit-overflow-scrolling: touch !important;
+	overflow-y: scroll !important;
+	background: #fff;
+        z-index:11111 !important;
+
+}
+.gtr-embed-iframe iframe {
+	height: 100%;
+	width: 100%;
+}
+.gtr-embed-iframe_scripts iframe {
+	height: 100%;
+	width: 100%;
+}

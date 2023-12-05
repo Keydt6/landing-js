@@ -1,0 +1,135 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+
+
+.boxed-slider .layer-1 h1 {
+    margin-bottom: 0px;
+}
+
+.boxed-slider .layer-1 .wide-text p {
+    margin-bottom: 0px;
+}
+
+.boxed-slider .layer-1 .pad {
+    /*padding-top:7%;*/
+    padding-top: 5%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.boxed-slider .overlay {
+    left: 15px;
+    width: 97.5%;
+}
+
+.pricing-price {
+    border-bottom: none;
+}
+
+.nav-pills > li > a {
+    background-color: rgba(255, 229, 191, 0.4);
+}
+
+.acctitle {
+    font-size: 20px;
+}
+
+.accordion.accordion-bg .acctitle, .accordion.accordion-bg .acctitlec {
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .boxed-slider .layer-1 .pad {
+        padding-top: 12%;
+        display: inherit;
+    }
+
+    .boxed-slider .layer-1 h1 {
+        font-size: 30px;
+    }
+
+    .boxed-slider .layer-1 .wide-text {
+        padding: 8px 0;
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #primary-menu ul li > a {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .boxed-slider .layer-1 .pad {
+        /*padding-top: 2%;*/
+        padding-top: 14%;
+        display: inherit;
+    }
+
+    .boxed-slider .layer-1 h1 {
+        font-size: 18px;
+    }
+
+    .boxed-slider .layer-1 .wide-text {
+        padding: 8px 0;
+        margin: 0;
+    }
+
+    .boxed-slider .layer-1 .wide-text p {
+        font-size: 14px;
+    }
+
+    .boxed-slider .layer-1 .wide-text p br {
+        display: none;
+    }
+
+    .share .full {
+        float: none;
+    }
+
+    .shares {
+        margin-bottom: 20px;
+    }
+
+}
+
+/*For Logo Alignment*/
+#logo {
+    float: none;
+    margin-right: 0px;
+}
+
+#logo img {
+    display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .boxed-slider img {
+        min-height: 200px !important;
+    }
+
+    .boxed-slider .layer {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 200px;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .boxed-slider .layer-1 .pad {
+        display: inherit;
+        display: flex;
+        flex-direction: column;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        justify-content: center;
+    }
+}

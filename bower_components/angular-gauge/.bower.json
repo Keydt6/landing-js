@@ -1,0 +1,23 @@
+{
+  "name": "angular-gauge",
+  "version": "2.0.2",
+  "main": "angular-gauge.js",
+  "ignore": [
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "justgage-bower": "https://github.com/toorshia/justgage.git"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/th00ber/angular-gauge",
+  "_release": "2.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.2",
+    "commit": "7214e8bcc6863f214caeb85dd3a982bd563bec6c"
+  },
+  "_source": "git://github.com/th00ber/angular-gauge.git",
+  "_target": "~2.0.1",
+  "_originalSource": "angular-gauge"
+}
