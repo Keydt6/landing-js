@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="author" content="GTR"/>
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css?v=0.02" type="text/css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.css" type="text/css"/>
+    <link rel="stylesheet" href="css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css"/>
+
+    <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="css/custom.css?v=0.04" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        .scrollbar-near-moon::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: #F5F5F5;
+            border-radius: 10px;
+        }
+
+        .scrollbar-near-moon::-webkit-scrollbar {
+            width: 12px;
+            background-color: #F5F5F5;
+        }
+
+        .scrollbar-near-moon::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-image: -webkit-gradient(linear, left bottom, left top, from(#5ee7df), to(#b490ca));
+            background-image: -webkit-linear-gradient(bottom, #5ee7df 0%, #b490ca 100%);
+            background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+        }
+
+        .thin::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        @media (max-width: 767px) {
+            .container, #header.full-header .container, .container-fullwidth {
+                width: 99% !important;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+
+            #footerVideo iframe {
+                width: 100%;
+            }
+
+            .boxed-slider img {
+                min-height: 170px;
+            }
+
+        }
+
+        .panel-heading .accordion-toggle:after {
+            font-family: 'font-icons';
+            content: "\e713";
+            float: right;
+        }
+
+        .panel-heading .accordion-toggle.collapsed:after {
+            content: "\e714";
+        }
+
+        .panel.panel-default {
+            background: transparent;
+            border: none;
+            margin: 0 25px 0 0;
+        }
+
+        .panel-default > .panel-heading {
+            background-color: rgba(238, 238, 238, 0.5);
+            border-radius: 0px;
+        }
+
+        .button.button-large {
+            /*padding: 0 145px;*/
+            font-size: 20px;
+            height: 50px;
+            line-height: 50px;
+            display: block;
+            text-align: center;
+        }
+
+        label.error{
+            display: none!important;
+        }
+
+        .alert-container {
+            text-align: center;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .alert-success-message {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+
+        .alert-error-message {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+
+        #footer1 {
+            position: relative;
+            background-color: #393939;
+            border-top: 2px solid rgb(255, 255, 255);
+        }
+
+        #one-step-form-section {
+            display: none;
+            margin-top: -30px;
+            margin-bottom: -60px;
+        }
+
+        #one-step-form-container {
+            display: grid;
+            justify-content: center;
+            padding: 40px 40px 60px;
+        }
+
+        #one-step-form-header {
+            display: flex;
+            margin: 10px auto;
+            padding: 0 0 10px 0;
+        }
+
+        #one-step-form-box {
+            box-shadow: 0px 4px 10px 0px #00000040;
+            padding: 0;
+            border-radius: 8px;
+        }
+
+        #share-arrow-icon {
+            position: absolute;
+            top: 12px;
+            left: 300px;
+            font-size: 30px;
+            transform: rotate(90deg);
+        }
+
+        #one-step-form-login {
+            display: flex;
+            justify-content: right;
+        }
+
+        /* @media screen and (min-width: 620px) {
+            #one-step-form-box {margin: auto;}
+        }
+        @media screen and (max-width: 620px) {
+            #share-arrow-icon {left: 250px; font-size: 20px;}
+        }
+        @media screen and (max-width: 920px) {
+            #one-step-form-header {display: flex; flex-direction: column;}
+            #one-step-form-title {order: 2;}
+            #one-step-form-login {order: 1; display: block;}
+        } */
+
+        /*@-webkit-keyframes fadein {
+
+            .boxed-slider .layer-1 .pad {
+                padding-top: 0%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .boxed-slider .layer {
+                position: absolute;
+                left: 10px;
+                height: 450px;
+                display: table;
+                width: 100%;
+                text-align: center;
+                color: white;
+            }
+
+        }*/
+
+    </style>
+    <title>GetTheReferral</title>
+
+</head>
+<body class="stretched">
+<main id="wrapper" class="clearfix">
+    <div class="container clearfix">
+        <!-- Logo -->
+    </div>
+
+    <section id="slider" class="boxed-slider" style="padding-top:0px; max-height:450px;">
+        <div class="container clearfix">
+            <!-- Section -->
+        </div>
+    </section>
+</main><!-- #wrapper end -->
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- External JavaScripts
+============================================= -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+
+<script>
+    // Para el accordion
+    function productsList(company_id) {
+        $.ajax({
+            type: "GET",
+            url: API_URL + "refPageProducts/" + company_id,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': TOKEN
+            },
+            success: function (res) {
+                if (res.success == '1') {
+                    content = '';
+                    $.each(res.result, function (i, product) {
+                        if (product.show_product == 1) {
+                            content += '<div class="panel panel-default">' +
+                                '<div class="panel-heading">' +
+                                '<h4 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '">' + product.product_name + '</a></h4></div>';
+                            if (i == 0) {
+                                content += '<div id="collapse' + i + '" class="panel-collapse collapse in"><div class="panel-body">';
+                            } else {
+                                content += '<div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body">';
+                            }
+                            if (product.product_type == 2) {
+                                content += '<div class="col-sm-2">&nbsp;</div>';
+                            }
+                            if (product.show_verified == 1) {
+                                content += '<div class="col-sm-4 text-center">' +
+                                    '<div class="boxes">';
+                                if (product.product_type == 1 && product.product_tiers.length > 0) {
+                                    content += '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' + verifiedText + '<br><small>' + verified_quote + '</small></h3>';
+                                    if (product.product_tiers.length < 3)
+                                        content += '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">';
+                                    else
+                                        content += '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">';
+
+                                    content += '<p style="font-size:16px;margin: 10px;color:#000;"> Verified Amount <span class="pull-right" style="margin: 0;font-size: large;">$' + product.converted_opportunity_amount + '</span></p>';
+                                    $.each(product.product_tiers, function (i, tier) {
+                                        content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.level) + ' Tier ';
+                                        content += '<span class="pull-right" style="margin: 0;font-size: large;">$' + tier.converted_opportunity_amount + '</span></p>';
+                                    });
+                                } else {
+                                    content += '<h3 class="verified" style="font-size:22px;">' + verifiedText + '</h3>' +
+                                        '<div class="pricing-price">';
+                                    if (product.show_rewards == 1) {
+                                        content += '<span class="price-unit">$</span>' + product.converted_opportunity_amount + ' ';
+                                    }
+                                    content += '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' + verified_quote + '</p>';
+                                }
+                                content += '</div>' +
+                                    '</div>' +
+                                    '</div>';
+                            }
+                            if (product.show_sold == 1) {
+                                content += '<div class="col-sm-4">' +
+                                    '<div class="boxes text-center">';
+
+                                if (product.product_type == 2) {
+                                    content += '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' + soldText + '<br><small>' + sold_quote + '</small></h3>';
+                                    if (product.product_referral_tiers.length <= 3)
+                                        content += '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">';
+                                    else
+                                        content += '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">';
+                                    $.each(product.product_referral_tiers, function (i, tier) {
+                                        if (i == (product.product_referral_tiers.length - 1))
+                                            content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.referral_tier) + ' and Onwards ';
+                                        else
+                                            content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.referral_tier) + ' Sold ';
+
+                                        content += '<span class="pull-right" style="margin: 0;font-size: large;">$' + tier.converted_customer_amount + '</span></p>';
+                                    });
+                                } else if (product.product_type == 1 && product.product_tiers.length > 0) {
+                                    content += '<h3 class="sold" style="font-size:22px;margin: -9px 0 6px;">' + soldText + '<br><small>' + sold_quote + '</small></h3>';
+                                    if (product.product_tiers.length < 3)
+                                        content += '<div class="pricing-price text-left" style="padding: 5px;height: 138px;">';
+                                    else
+                                        content += '<div class="pricing-price text-left scrollbar scrollbar-near-moon thin" style="padding: 5px;height: 138px;overflow-y: scroll;">';
+
+                                    content += '<p style="font-size:16px;margin: 10px;color:#000;"> Sold Amount <span class="pull-right" style="margin: 0;font-size: large;">$' + product.converted_customer_amount + '</span></p>';
+                                    $.each(product.product_tiers, function (i, tier) {
+                                        content += '<p style="font-size:16px;margin: 10px;color:#000;">' + ordinal_suffix_of(tier.level) + ' Tier ';
+                                        content += '<span class="pull-right" style="margin: 0;font-size: large;">$' + tier.converted_customer_amount + '</span></p>';
+                                    });
+                                } else {
+                                    if (product_percent_sale == 1)
+                                        content += '<h3 class="sold" style="font-size:22px;">% Of Sale</h3>';
+                                    else
+                                        content += '<h3 class="sold" style="font-size:22px;">' + soldText + '</h3>';
+
+                                    content += '<div class="pricing-price">';
+                                    if (product.show_rewards == 1) {
+                                        if (product_percent_sale == 1)
+                                            content += '<span class="price-unit"></span>' + product.converted_customer_amount + '%';
+                                        else
+                                            content += '<span class="price-unit">$</span>' + product.converted_customer_amount + '';
+
+                                        content += '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">' + sold_quote + '</p>';
+                                    }
+                                }
+                                content += '</div>' +
+                                    '</div>' +
+                                    '</div>';
+                            }
+                            if (product.is_bonus == 1 && product.show_bonus == 1 && product.product_type != 2) {
+                                content += '<div class="col-sm-4">' +
+                                    '<div class="boxes text-center">' +
+                                    '<h3 style="font-size:22px;">Bonus Rewards</h3>' +
+                                    '<div class="pricing-price">';
+                                if (product.show_rewards == 1) {
+                                    content += '<span class="price-unit">$</span>' + product.bonus_amount + ' ';
+                                }
+                                content += '<p style="font-size:16px; margin-top:20px; margin-bottom:20px; color:#000;">Receive a bonus for every (' + product.bonus_eligibility + ') sold</p>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>';
+                            }
+                            content += '<div class="clearfix"></div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+                        }
+                    });
+                    $("#accordion").html(content);
+                } else {
+                    $("#accordion").html(res.message);
+                }
+            },
+            error: function (e) {
+                $("#accordion").html("Something went wrong!");
+            }
+        });
+    }
+
+</script>
+
+<script type="text/javascript" src="js/functions.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+</body>
+</html>
