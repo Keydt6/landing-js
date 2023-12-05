@@ -11,15 +11,7 @@ h6 {
   font-family: 'Montserrat', sans-serif, system-ui;
 }
 
-.banner {
-  font-family: 'Montserrat', sans-serif, system-ui;
-  width: 1000px;
-  min-height: 200px;
-  max-height: 450px;
-}
-
 .banner-1 {
-  background-image: url('./../assets/banner-3.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -34,12 +26,12 @@ h6 {
     font-weight: 700;
     margin-top: 15px;
     margin-bottom: 15px;
-    max-width: 350px;
+    /* max-width: 350px; */
   }
 
   .subtitle {
     color: #000000;
     font-weight: 300;
-    max-width: 350px;
+    /* max-width: 350px; */
   }
 }
