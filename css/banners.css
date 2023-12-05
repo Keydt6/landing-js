@@ -105,19 +105,21 @@ h6 {
 }
 
 .disclaimer-section {
-  max-height: 250px;
+  /* max-height: 250px; */
   padding: 30px 80px !important;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* text-align: justify; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
   color: #ffffff;
 
   .disclaimer {
+    text-align: center;
     font-size: 10px;
   }
 
   .copyright {
+    text-align: center;
     font-size: 12px;
     margin: 0;
   }
