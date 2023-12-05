@@ -98,6 +98,12 @@ h6 {
   }
 }
 
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .disclaimer-section {
   max-height: 250px;
   padding: 30px 80px !important;
