@@ -19,7 +19,7 @@ h6 {
 }
 
 .banner-1 {
-  background-image: url('/assets/banner-1.avif');
+  background-image: url('./../assets/banner-3.jpeg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

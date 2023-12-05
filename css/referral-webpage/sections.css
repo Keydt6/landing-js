@@ -1,0 +1,12 @@
+section {
+    padding-top: 0px;
+    max-height: 450px;
+}
+
+section > div {
+    padding: 40px !important;
+}
+
+.reward-section {
+    text-align: center;
+}
