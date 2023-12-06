@@ -95,6 +95,33 @@ h6 {
         width: 50%;
         margin: auto;
       }
+
+      .card-form_title {
+        margin: 5px 0 15px;
+      }
+
+      .card-form_controls {
+        .card-form_label {
+          width: 100%;
+          font-family: 'Montserrat', sans-serif, system-ui !important;
+          font-size: 10px;
+          font-weight: 500;
+          color: #000000;
+          text-transform: capitalize;
+          padding: 0 10px;
+        }
+
+        .card-form_input {
+          font-family: 'Montserrat', sans-serif, system-ui !important;
+          width: 100%;
+          padding: 5px 10px;
+          margin: 6px 0;
+          border: solid 1px #aaaaaa;
+          background-color: #f3f3f3;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
@@ -159,6 +186,10 @@ h6 {
       .head-text {
         margin-bottom: 0;
       }
+    }
+
+    .card .card-form .card-form_controls .card-form_label {
+      width: 49%;
     }
   }
 
