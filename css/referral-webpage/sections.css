@@ -39,3 +39,12 @@ section > div {
         margin: 10px 0 10px 0;
     }
 }
+
+
+.video-section {
+    .item-video > iframe {
+        width: 90%;
+        height: 315px;
+        border-radius: 12px;
+    }
+}
