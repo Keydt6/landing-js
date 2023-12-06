@@ -14,7 +14,7 @@ h6 {
 .button-rounded {
   border-radius: 100px !important;
   border: none !important;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 .text-capitalize {
@@ -36,23 +36,23 @@ h6 {
     font-weight: 700;
     line-height: 1.1;
     margin: 40px 0 15px 0;
-    max-width: 40%;
   }
 
   .subtitle {
     color: #000000;
     font-weight: 300;
     margin: 0 0 15px 0;
-    max-width: 40%;
   }
 }
 
 .form-section {
   max-height: max-content;
-  padding: 60px 120px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 
   .head {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
@@ -60,6 +60,7 @@ h6 {
     .head-text {
       display: inherit;
       align-items: inherit;
+      margin-bottom: 15px;
     }
 
     .head-icon {
@@ -106,11 +107,13 @@ h6 {
 
 .disclaimer-section {
   /* max-height: 250px; */
-  padding: 30px 80px !important;
   /* text-align: justify; */
   /* display: flex; */
   /* flex-direction: column; */
   /* align-items: center; */
+
+  padding-right: 10px;
+  padding-left: 10px;
   color: #ffffff;
 
   .disclaimer {
@@ -124,3 +127,67 @@ h6 {
     margin: 0;
   }
 }
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 40em) {
+  .form-section {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    .head {
+      flex-direction: column;
+
+      .head-text {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+  .button-rounded {
+    padding: 0 50px;
+  }
+
+  .form-section {
+    padding: 40px !important;
+
+    .head {
+      flex-direction: column;
+
+      .head-text {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .banner-section {
+    .title,
+    .subtitle {
+      max-width: 40%;
+    }
+  }
+
+  .disclaimer-section {
+    padding: 30px 80px !important;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  .form-section {
+    padding: 60px 100px !important;
+
+    .head {
+      flex-direction: row;
+    }
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+/* @media only screen and (min-width: 80em) {
+  .form-section {
+    padding: 0px;
+  }
+} */

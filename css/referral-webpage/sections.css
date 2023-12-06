@@ -1,50 +1,58 @@
 section {
-    font-family: 'Montserrat', sans-serif, system-ui;
-    padding-top: 0px;
-    /* max-height: 450px; */
+  font-family: 'Montserrat', sans-serif, system-ui;
+  padding-top: 0px;
+  /* max-height: 450px; */
 }
 
 section > div {
-    padding: 40px !important;
+  padding: 40px;
 }
 
 .reward-section {
-    text-align: center;
+  text-align: center;
 
-    #accordion > h1, h2, h3, h4, h5, p {
-        color: #fff !important;
-    }
+  #accordion > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    color: #fff !important;
+  }
 
-    .pricing-text {
-        color: #fff !important;
-        p {
-            color: #fff !important;
-        }
+  .pricing-text {
+    color: #fff !important;
+    p {
+      color: #fff !important;
     }
+  }
 
-    .pricing-icon {
-        color: #FBB15D;
-        font-weight: 600;
-        font-size: 2.5em;
-    }
+  .pricing-icon {
+    color: #fbb15d;
+    font-weight: 600;
+    font-size: 2.5em;
+  }
 
-    .disclaimer {
-        margin: 10px !important;
-        font-size: 10px;
-    }
+  .disclaimer {
+    margin: 10px !important;
+    font-size: 10px;
+  }
 }
 
 .submit-section {
-    .html-content > h1, h2, h3, h4, h5 {
-        margin: 10px 0 10px 0;
-    }
+  .html-content > h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 10px 0 10px 0;
+  }
 }
 
-
 .video-section {
-    .item-video > iframe {
-        width: 90%;
-        height: 315px;
-        border-radius: 12px;
-    }
+  .item-video > iframe {
+    width: 90%;
+    height: 315px;
+    border-radius: 12px;
+  }
 }
