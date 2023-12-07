@@ -207,7 +207,7 @@
     </style>
     <title>GetTheReferral</title>
   </head>
-  <body class="stretched">
+  <body class="stretched no-transition">
     <main id="wrapper" class="clearfix">
       <div class="container clearfix">
         <!-- Logo -->
@@ -278,9 +278,11 @@
       <!-- SUBMIT SECTION -->
       <section>
         <div class="container clearfix submit-section">
-          <h2 style="color: #000; text-align: center; margin: 0 0 25px 0">
+          <h2 style="color: #000; text-align: center;">
             Submit Referrals with SunSolar App
           </h2>
+
+          <h3 style="text-align: center; margin: 0 0 25px 0;">(Company Code: 5332)</h3>
 
           <div class="row">
             <div class="col-sm-5" style="text-align: center">
@@ -289,20 +291,20 @@
 
             <div class="col-sm-7">
               <div class="html-content">
-                <h3>1. Download SunSolar Referral App</h3>
+                <h3>1. Download #cotitle App</h3>
                 <p>
                   Download our app via QR Code, App Store or Google Play and
                   create an account.
                 </p>
 
                 <div style="display: flex; width: 100%">
-                  <div style="width: 50%; margin: 5px">
-                    <img style="margin: 5px" src="assets/apple_store.png" />
-                    <img style="margin: 5px" src="assets/play_store.png" />
+                  <div style="width: 50%; margin: 5px; align-self: center;">
+                    <div>#app_store_button</div>
+                    <div>#play_store_button</div>
                   </div>
 
-                  <div style="width: 50%; margin: 5px">
-                    <img style="margin: 5px" src="assets/qr_code.png" />
+                  <div style="width: 50%; margin: 5px; text-align: center;">
+                    <div>#qrCode</div>
                   </div>
                 </div>
 
@@ -337,7 +339,13 @@
                   Fill out the form below to send your referral
                 </p>
               </div>
-              <i class="fa fa-arrow-down head-icon" aria-hidden="true"></i>
+
+              <svg id="arrow-svg" width="30" height="30" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.0607 23.9385C37.4749 23.3527 36.5251 23.3527 35.9393 23.9385L27.6667 32.2112L19.394 23.9385C18.8082 23.3527 17.8585 23.3527 17.2727 23.9385C16.6869 24.5243 16.6869 25.4741 17.2727 26.0598L26.606 35.3932C27.1918 35.979 28.1415 35.979 28.7273 35.3932L38.0607 26.0598C38.6464 25.4741 38.6464 24.5243 38.0607 23.9385Z" fill="#2E1D11"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.667 36.1665C28.4954 36.1665 29.167 35.4949 29.167 34.6665L29.167 27.6665C29.167 12.6631 17.0038 0.499836 2.00032 0.499836C1.1719 0.499836 0.500325 1.17141 0.500325 1.99984C0.500325 2.82826 1.1719 3.49984 2.00032 3.49984C15.3469 3.49984 26.167 14.3199 26.167 27.6665L26.167 34.6665C26.167 35.4949 26.8386 36.1665 27.667 36.1665Z" fill="#2E1D11"/>
+              </svg>
+                
+              <!-- <i class="fa fa-arrow-down head-icon" aria-hidden="true"></i> -->
             </div>
             <button
               type="button"
@@ -353,7 +361,7 @@
               <h4 class="card-form_title">Referral Information:</h4>
               <div class="card-form_controls">
                 <label class="card-form_label">
-                  Referral First Name
+                  Referral First Name <span style="color: red;">*</span>
                   <input class="card-form_input" />
                 </label>
                 <label class="card-form_label">
@@ -717,8 +725,8 @@
         .forEach((product, idx) => {
           content +=
             '<div class="">' +
-            '<div style="color: #fff">' +
-            '<p style="border-bottom: solid 1px #ffffff; line-height: 0.1em;"><a class="accordion-toggle" style="color: #fff; background-color: #3d3229; padding: 0 10px 0 22px;" data-toggle="collapse" data-parent="#products-accordion" href="#collapse-product-' +
+            '<div class="accordion-title" style="color: #fff">' +
+            '<p style="border-bottom: solid 1px rgba(255, 255, 255, 0.5); line-height: 0.1em;"><a class="accordion-toggle" style="color: #fff; background-color: #3d3229; padding: 0 10px 0 22px;" data-toggle="collapse" data-parent="#products-accordion" href="#collapse-product-' +
             idx +
             '">' +
             product.product_name +
